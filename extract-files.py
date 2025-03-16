@@ -50,7 +50,7 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libgui_shim.so'),
     'system_ext/lib64/libwfdnative.so': blob_fixup()
         .add_needed('libinput_shim.so'),
-    'vendor/lib/libVDBlurlessAPI_v2.so': blob_fixup()
+    ('vendor/lib/libVDBlurlessAPI_v2.so', 'vendor/lib/libhalide_hexagon_host.so'): blob_fixup()
         .clear_symbol_version('remote_handle_close')
         .clear_symbol_version('remote_handle_invoke')
         .clear_symbol_version('remote_handle_open'),

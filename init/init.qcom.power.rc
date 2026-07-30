@@ -67,20 +67,21 @@ on property:init.svc.vendor.charger=running
     setprop sys.usb.controller a600000.dwc3
     setprop sys.usb.configfs 1
 
-    # Keep one LITTLE and one big
-    write /sys/devices/system/cpu/cpu1/online 0
-    write /sys/devices/system/cpu/cpu2/online 0
-    write /sys/devices/system/cpu/cpu3/online 0
-    write /sys/devices/system/cpu/cpu5/online 0
-    write /sys/devices/system/cpu/cpu6/online 0
-    write /sys/devices/system/cpu/cpu7/online 0
+    # Keep all CPUs online in charger mode to prevent rendering thread freezes
+    write /sys/devices/system/cpu/cpu1/online 1
+    write /sys/devices/system/cpu/cpu2/online 1
+    write /sys/devices/system/cpu/cpu3/online 1
+    write /sys/devices/system/cpu/cpu4/online 1
+    write /sys/devices/system/cpu/cpu5/online 1
+    write /sys/devices/system/cpu/cpu6/online 1
+    write /sys/devices/system/cpu/cpu7/online 1
 
     # Enable UFS powersaving
     write /sys/devices/platform/soc/${ro.boot.bootdevice}/clkgate_enable 1
     write /sys/devices/platform/soc/${ro.boot.bootdevice}/hibern8_on_idle_enable 1
 
-    # Turn on sleep modes
-    write /sys/module/lpm_levels/parameters/sleep_disabled 0
+    # Disable LPM sleep during charger mode to prevent DRM vsync/display hangs
+    write /sys/module/lpm_levels/parameters/sleep_disabled 1
 
 on enable-low-power
     # Set the default IRQ affinity to the silver cluster.

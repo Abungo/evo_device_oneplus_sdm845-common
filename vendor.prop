@@ -1,3 +1,6 @@
+# Charger
+ro.product.charger.unplugged_shutdown_time=0
+
 # Audio
 persist.vendor.audio.fluence.speaker=true
 persist.vendor.audio.fluence.voicecall=true

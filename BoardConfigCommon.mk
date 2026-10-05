@@ -91,6 +91,10 @@ BOARD_SUPPORTS_SOUND_TRIGGER := true
 BOARD_USES_ALSA_AUDIO := true
 USE_CUSTOM_AUDIO_POLICY := 1
 
+# Camera
+$(call soong_config_set_bool,camera,override_format_from_reserved,true)
+$(call soong_config_set,camera,package_name,com.oneplus.camera)
+
 # Display
 TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE := true
 TARGET_SCREEN_DENSITY := 450

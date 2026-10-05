@@ -110,6 +110,8 @@ ro.bluetooth.a2dp_offload.supported=true
 
 # Camera
 persist.vendor.camera.privapp.list=com.oneplus.factorymode,com.oneplus.camera,com.oem.autotest,com.oneplus.healthcheck
+persist.vendor.camera.sceneclassify.enable=0
+vendor.camera.skip_unconfigure.packagelist=com.oneplus.camera
 
 # Chipset
 ro.soc.manufacturer=Qualcomm

@@ -402,3 +402,17 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     firmware_wlan_mac.bin_symlink \
     firmware_WCNSS_qcom_cfg.ini_symlink
+
+# KernelSU Next Manager
+PRODUCT_PACKAGES += \
+    KernelSU
+
+
+# OnePlus Stock Camera & Gallery
+$(call inherit-product-if-exists, vendor/oneplus/camera/onepluscamera.mk)
+
+# Enable ADB by default for debugging
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.usb.config=adb \
+    ro.adb.secure=0 \
+    persist.service.adb.enable=1

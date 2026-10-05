@@ -92,8 +92,12 @@ BOARD_USES_ALSA_AUDIO := true
 USE_CUSTOM_AUDIO_POLICY := 1
 
 # Camera
+MALLOC_SVELTE += true
+MALLOC_SVELTE_FOR_LIBC32 := true
+$(call soong_config_set_bool,camera,needs_client_info_lib,true)
 $(call soong_config_set_bool,camera,override_format_from_reserved,true)
 $(call soong_config_set,camera,package_name,com.oneplus.camera)
+TARGET_USES_YCRCB_CAMERA_ENCODE := true
 
 # Display
 TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE := true

@@ -41,7 +41,6 @@ cc_prebuilt_binary {
         "SafetyHubPrebuilt",
         "GoogleContacts",
         "AiIconsPrebuilt_20251106",
-        "WebViewGoogle",
     ],
     strip: {
         none: true,

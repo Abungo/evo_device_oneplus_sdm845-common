@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2024 Ren Linux / Android Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- RenSettings Main -->
+    <string name="ren_settings_title">Ren Tuning &amp; Dashboard</string>
+    <string name="ren_settings_summary">Hardware performance dashboard, Wi-Fi antenna tuning, and CPU profiles</string>
+
+    <!-- Subcategories -->
+    <string name="ren_dashboard_title">Real-Time Performance Dashboard</string>
+    <string name="ren_dashboard_summary">Live power draw, CPU core frequencies, SoC thermals &amp; GPU graphs</string>
+
+    <string name="ren_wifi_title">Wi-Fi Tuning</string>
+    <string name="ren_wifi_summary">Tx Power limits, 2.4GHz/5GHz bandwidth, 2x2 MIMO &amp; range controls</string>
+
+    <string name="ren_cpu_title">CPU Control &amp; Power Profiles</string>
+    <string name="ren_cpu_summary">Clock frequency limits, power profile modes, and governor parameters</string>
+
+    <!-- Dashboard Strings -->
+    <string name="ren_power_graph_title">Power Draw &amp; Current Consumption</string>
+    <string name="ren_cpu_graph_title">CPU Core Frequency Scaling</string>
+    <string name="ren_thermal_graph_title">SoC Thermals &amp; GPU Clock</string>
+    <string name="ren_power_monitor_title">Real-Time Power Consumption</string>
+    <string name="ren_power_monitor_summary">Calculating live metrics...</string>
+    <string name="ren_power_monitor_refresh_title">Dashboard Refresh Interval</string>
+    <string name="ren_power_monitor_refresh_summary">Set update frequency for real-time telemetry graphs</string>
+
+    <!-- Wi-Fi Tuning Strings -->
+    <string name="wifi_2g_category_title">2.4 GHz Band Settings</string>
+    <string name="wifi_5g_category_title">5 GHz Band Settings</string>
+    <string name="wifi_advanced_category_title">Advanced Antenna &amp; Range</string>
+    <string name="wifi_tx_power_2g_title">2.4 GHz Transmit Power (Tx Power)</string>
+    <string name="wifi_tx_power_2g_summary">Set maximum hardware transmit power limit for 2.4 GHz</string>
+    <string name="wifi_tx_power_5g_title">5 GHz Transmit Power (Tx Power)</string>
+    <string name="wifi_tx_power_5g_summary">Set maximum hardware transmit power limit for 5 GHz</string>
+    <string name="wifi_bw_2g_title">2.4 GHz Channel Width</string>
+    <string name="wifi_bw_2g_summary">Select bandwidth (Narrower bandwidth yields greater range)</string>
+    <string name="wifi_bw_5g_title">5 GHz Channel Width</string>
+    <string name="wifi_bw_5g_summary">Select bandwidth (Narrower bandwidth yields greater range)</string>
+    <string name="wifi_mimo_beamforming_title">Force 2x2 MIMO &amp; Beamforming</string>
+    <string name="wifi_mimo_beamforming_summary">Force continuous dual-antenna reception and beamforming (+3 dB to +5 dB gain)</string>
+    <string name="wifi_ldpc_title">LDPC Error Correction</string>
+    <string name="wifi_ldpc_summary">Enable Low-Density Parity-Check to maintain decodability at weak signals (-88 dBm)</string>
+    <string name="wifi_roam_threshold_title">Roaming Sensitivity</string>
+    <string name="wifi_roam_threshold_summary">Control RSSI disconnection threshold for long range</string>
+
+    <!-- CPU Control Strings -->
+    <string name="cpu_governor_title">CPU Governor</string>
+    <string name="cpu_governor_summary">Set CPU scaling governor policy</string>
+    <string name="power_profile_category_title">Device Power Profiles</string>
+    <string name="power_profile_title">Power Profile Mode</string>
+    <string name="power_profile_summary">Dynamically adjust CPU scaling caps, GPU limits, and WALT load tracking</string>
+    <string name="cpu_clock_category_title">CPU Cluster Maximum Frequencies</string>
+    <string name="cpu_clock_little_title">LITTLE Cluster Max Frequency (Kryo 385 Silver)</string>
+    <string name="cpu_clock_little_summary">Set maximum clock limit for cores 0-3</string>
+    <string name="cpu_clock_big_title">Big Cluster Max Frequency (Kryo 385 Gold)</string>
+    <string name="cpu_clock_big_summary">Set maximum clock limit for cores 4-7</string>
+
+</resources>

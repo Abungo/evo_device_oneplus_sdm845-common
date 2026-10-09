@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2024 Ren Linux / Android Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/ren_dashboard_title">
+
+    <PreferenceCategory
+        android:key="ren_dashboard_graphs_category"
+        android:title="@string/ren_dashboard_title">
+
+        <!-- 1. Dedicated Power Consumption Graph Card -->
+        <org.ren.settings.preferences.RenPowerMonitorPreference
+            android:key="ren_power_graph_card"
+            android:title="@string/ren_power_graph_title"
+            android:summary="@string/ren_power_monitor_summary" />
+
+        <!-- 2. Dedicated CPU Clocks Graph Card -->
+        <org.ren.settings.preferences.RenPowerMonitorPreference
+            android:key="ren_cpu_graph_card"
+            android:title="@string/ren_cpu_graph_title"
+            android:summary="@string/ren_power_monitor_summary" />
+
+        <!-- 3. Dedicated System Thermals & GPU Graph Card -->
+        <org.ren.settings.preferences.RenPowerMonitorPreference
+            android:key="ren_thermal_graph_card"
+            android:title="@string/ren_thermal_graph_title"
+            android:summary="@string/ren_power_monitor_summary" />
+
+        <!-- Refresh Interval Selector -->
+        <org.ren.settings.preferences.SystemPropertyListPreference
+            android:key="persist.sys.power_monitor_interval"
+            android:title="@string/ren_power_monitor_refresh_title"
+            android:summary="@string/ren_power_monitor_refresh_summary"
+            android:entries="@array/power_monitor_refresh_entries"
+            android:entryValues="@array/power_monitor_refresh_values"
+            android:defaultValue="1000" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

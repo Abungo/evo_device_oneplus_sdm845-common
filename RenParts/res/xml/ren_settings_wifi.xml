@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2024 Ren Linux / Android Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/ren_wifi_title">
+
+    <PreferenceCategory
+        android:key="wifi_2g_category"
+        android:title="@string/wifi_2g_category_title">
+
+        <org.ren.settings.preferences.SystemPropertyListPreference
+            android:key="persist.sys.wifi.txpower.2g"
+            android:title="@string/wifi_tx_power_2g_title"
+            android:summary="@string/wifi_tx_power_2g_summary"
+            android:entries="@array/wifi_tx_power_entries"
+            android:entryValues="@array/wifi_tx_power_values"
+            android:defaultValue="20" />
+
+        <org.ren.settings.preferences.SystemPropertyListPreference
+            android:key="persist.sys.wifi.bw.2g"
+            android:title="@string/wifi_bw_2g_title"
+            android:summary="@string/wifi_bw_2g_summary"
+            android:entries="@array/wifi_bw_2g_entries"
+            android:entryValues="@array/wifi_bw_2g_values"
+            android:defaultValue="0" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="wifi_5g_category"
+        android:title="@string/wifi_5g_category_title">
+
+        <org.ren.settings.preferences.SystemPropertyListPreference
+            android:key="persist.sys.wifi.txpower.5g"
+            android:title="@string/wifi_tx_power_5g_title"
+            android:summary="@string/wifi_tx_power_5g_summary"
+            android:entries="@array/wifi_tx_power_entries"
+            android:entryValues="@array/wifi_tx_power_values"
+            android:defaultValue="20" />
+
+        <org.ren.settings.preferences.SystemPropertyListPreference
+            android:key="persist.sys.wifi.bw.5g"
+            android:title="@string/wifi_bw_5g_title"
+            android:summary="@string/wifi_bw_5g_summary"
+            android:entries="@array/wifi_bw_5g_entries"
+            android:entryValues="@array/wifi_bw_5g_values"
+            android:defaultValue="2" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="wifi_advanced_category"
+        android:title="@string/wifi_advanced_category_title">
+
+        <org.ren.settings.preferences.SystemPropertySwitchPreference
+            android:key="persist.sys.wifi.force_2x2_mimo"
+            android:title="@string/wifi_mimo_beamforming_title"
+            android:summary="@string/wifi_mimo_beamforming_summary"
+            android:defaultValue="true" />
+
+        <org.ren.settings.preferences.SystemPropertySwitchPreference
+            android:key="persist.sys.wifi.enable_ldpc"
+            android:title="@string/wifi_ldpc_title"
+            android:summary="@string/wifi_ldpc_summary"
+            android:defaultValue="true" />
+
+        <org.ren.settings.preferences.SystemPropertyListPreference
+            android:key="persist.sys.wifi.roam_threshold"
+            android:title="@string/wifi_roam_threshold_title"
+            android:summary="@string/wifi_roam_threshold_summary"
+            android:entries="@array/wifi_roam_threshold_entries"
+            android:entryValues="@array/wifi_roam_threshold_values"
+            android:defaultValue="-88" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

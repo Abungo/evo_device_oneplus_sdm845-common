@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2024 Ren Linux / Android Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/ren_cpu_title">
+
+    <PreferenceCategory
+        android:key="cpu_governor_category"
+        android:title="@string/cpu_governor_title">
+
+        <org.ren.settings.preferences.SystemPropertyListPreference
+            android:key="persist.sys.cpu.governor"
+            android:title="@string/cpu_governor_title"
+            android:summary="@string/cpu_governor_summary"
+            android:entries="@array/cpu_governor_entries"
+            android:entryValues="@array/cpu_governor_values"
+            android:defaultValue="schedutil" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="power_profile_category"
+        android:title="@string/power_profile_category_title">
+
+        <org.ren.settings.preferences.SystemPropertyListPreference
+            android:key="persist.sys.power_profile"
+            android:title="@string/power_profile_title"
+            android:summary="@string/power_profile_summary"
+            android:entries="@array/power_profile_entries"
+            android:entryValues="@array/power_profile_values"
+            android:defaultValue="1" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="cpu_clock_category"
+        android:title="@string/cpu_clock_category_title">
+
+        <org.ren.settings.preferences.SystemPropertyListPreference
+            android:key="persist.sys.cpu.max_freq.policy0"
+            android:title="@string/cpu_clock_little_title"
+            android:summary="@string/cpu_clock_little_summary"
+            android:entries="@array/cpu_clock_little_entries"
+            android:entryValues="@array/cpu_clock_little_values"
+            android:defaultValue="1766400" />
+
+        <org.ren.settings.preferences.SystemPropertyListPreference
+            android:key="persist.sys.cpu.max_freq.policy4"
+            android:title="@string/cpu_clock_big_title"
+            android:summary="@string/cpu_clock_big_summary"
+            android:entries="@array/cpu_clock_big_entries"
+            android:entryValues="@array/cpu_clock_big_values"
+            android:defaultValue="2649600" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

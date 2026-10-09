@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2024 Ren Linux / Android Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/ren_settings_title">
+
+    <PreferenceCategory
+        android:key="ren_features_category"
+        android:title="@string/ren_settings_title">
+
+        <!-- Real-Time Performance Dashboard -->
+        <Preference
+            android:key="ren_dashboard"
+            android:title="@string/ren_dashboard_title"
+            android:summary="@string/ren_dashboard_summary"
+            android:icon="@drawable/ic_ren"
+            android:fragment="org.ren.settings.fragments.RenDashboardSettingsFragment" />
+
+        <!-- Wi-Fi Tuning -->
+        <Preference
+            android:key="ren_wifi"
+            android:title="@string/ren_wifi_title"
+            android:summary="@string/ren_wifi_summary"
+            android:icon="@drawable/ic_ren"
+            android:fragment="org.ren.settings.fragments.RenWifiSettingsFragment" />
+
+        <!-- CPU Control & Power Profiles -->
+        <Preference
+            android:key="ren_cpu"
+            android:title="@string/ren_cpu_title"
+            android:summary="@string/ren_cpu_summary"
+            android:icon="@drawable/ic_ren"
+            android:fragment="org.ren.settings.fragments.RenCpuSettingsFragment" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

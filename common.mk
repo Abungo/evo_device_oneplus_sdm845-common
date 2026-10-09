@@ -216,9 +216,10 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.composer-service \
     vendor.qti.hardware.memtrack-service
 
-# Doze
+# Doze & Device Parts
 PRODUCT_PACKAGES += \
-    OnePlusDoze
+    OnePlusDoze \
+    RenParts
 
 # DRM
 PRODUCT_PACKAGES += \

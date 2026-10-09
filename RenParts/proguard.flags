@@ -1,0 +1,6 @@
+-keep class org.ren.settings.** { *; }
+-keepclassmembers class * extends androidx.preference.Preference {
+    public <init>(android.content.Context, android.util.AttributeSet);
+    public <init>(android.content.Context, android.util.AttributeSet, int);
+    public <init>(android.content.Context, android.util.AttributeSet, int, int);
+}

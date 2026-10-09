@@ -1,0 +1,32 @@
+/*
+ * Copyright (C) 2024 Ren Linux / Android Project
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+android_app {
+    name: "RenParts",
+
+    defaults: ["SettingsLibDefaults"],
+
+    srcs: ["src/**/*.java"],
+    resource_dirs: ["res"],
+
+    manifest: "AndroidManifest.xml",
+
+    certificate: "platform",
+    platform_apis: true,
+    privileged: true,
+    system_ext_specific: true,
+
+    static_libs: [
+        "androidx.core_core",
+        "androidx.preference_preference",
+        "androidx.appcompat_appcompat",
+        "com.google.android.material_material",
+        "SettingsLibCollapsingToolbarBaseActivity",
+    ],
+
+    optimize: {
+        proguard_flags_files: ["proguard.flags"],
+    },
+}
